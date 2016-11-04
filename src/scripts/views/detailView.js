@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from './header'
-import Footer from './footer'
-import Likes from './likes'
-import Comments from './comments'
+// import Footer from './footer'
+// import Likes from './likes'
+// import Comments from './comments'
 
 var DetailView = React.createClass({
 	render: function() {
 		return (
-			<div class="body-container">
+			<div className="body-container">
 				<Header />
 				<Image model="this.props.<endpoint_here>" />
 				<Footer />
