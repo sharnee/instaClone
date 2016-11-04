@@ -58,8 +58,11 @@ const app = function() {
 				data:{
 					'term': searchTerm
 				}
-				ReactDOM.render(<ListView collection={individualModel} />, document.querySelector('.body-wrapper'))
 			})
+			promise.then(
+				function(){
+					ReactDOM.render(<ListView collection={individualModel} />, document.querySelector('.body-wrapper'))
+				})
 		},
 		handleDefault: function(){
 			location.hash = 'home'
