@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './header'
 import Footer from './footer'
 // import Likes from './likes'
+import CommentsHeader from './commentsHeader'
 import Comments from './comments'
 
 var DetailView = React.createClass({
