@@ -5,40 +5,35 @@ import Header from './view/header.js'
 
 const app = function() {
 //MODEL
-	var PictureMOdel = Backbone.Collection.extend({
-		url: 'some url',
-		_key: 'some key',
-		//temp parse function if needed. I don't think we will need this but it's here if we do. 
+	var PictureModel = Backbone.Collection.extend({
+		url: 'https://instaclone-example.now.sh/api/gram',
+		// _key: 'some key',
+		// temp parse function if needed. I don't think we will need this but it's here if we do. 
 		parse: function(rawResponse){
 	 			var parsedResponse = rawResponse.results
 	 			return parsedResponse
 	 		}
 		})
+	var IndividualModel = Backbone.Model.extend ({
+		urlRoot: 'https://instaclone-example.now.sh/api/gram/'	
+	})
 //CONTROLLER
 	var Controller = Backbone.Router.extend({
 		routes:{
-			'home': 'handleGrid',
-			'search/:term': 'handleSearch',
-			'detail/:id': 'handlDetail',
-			'scroll': 'handleScroll',
-			'creator': 'handleCreator',
+			'listView': 'handleListView',
+			'detail/:imageId': 'handlDetail',
 			'*default': 'handleDefault'
 		},
-		handleGrid: function(){
-			console.log('handeling Grid')
-		},
-		handleSearch: function(){
-			console.log('handeling Search')
+		handleListView: function(){
+			console.log('handeling listView')
 		},
 		handlDetail: function(){
+			var individualModel = new IndividualModel({
+				id: imageId
+			})
+
 			console.log('handeling detail')
 		},
-		handleScroll: function(){
-			console.log('handeling the Scroll')
-		}, 
-		handleCreator: function(){
-			console.log('handeling the creator view')
-		}, 
 		handleDefault: function(){
 			location.hash = 'home'
 			console.log('handeling Default')
