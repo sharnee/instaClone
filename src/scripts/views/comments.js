@@ -6,7 +6,7 @@ var Comments = React.createClass({
 		for ( var i = 0; i < commentsArray.length; i++) {
 			commentStr += '<li><strong>' + commentsArray[i].byUser + '</strong> ' + commentsArray[i].message + '</li>'
 		}
-		return ('<ul>' + commentStr + '</ul>')
+		return (<ul> {commentStr} </ul>)
 	},
 	render: function() {
 		var detailData = this.props.model
