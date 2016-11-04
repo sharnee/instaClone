@@ -27,6 +27,7 @@ var Image = React.createClass({
 					<img src={ detailData.get('imageURL') } />
 				</div>
 				<div className="details-container">
+					<CommentsHeader model={this.props.model} />
 					<Comments model={this.props.model} />
 				</div>
 			</section>
