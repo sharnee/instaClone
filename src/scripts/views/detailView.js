@@ -1,17 +1,15 @@
 import React from 'react'
 import Header from './header'
 import Footer from './footer'
+import Likes from './likes'
+import Comments from './comments'
 
 var DetailView = React.createClass({
 	render: function() {
 		return (
 			<div class="body-container">
 				<Header />
-				<section className="">
-					<Image model="this.props.<endpoint_here>" />
-					<Likes />
-					<Comments model="this.props.<endpoint_here>" />
-				</section>
+				<Image model="this.props.<endpoint_here>" />
 				<Footer />
 			</div>
 		)
@@ -21,11 +19,20 @@ var DetailView = React.createClass({
 var Image = React.createClass({
 	render: function() {
 		return (
-			<div className="main-image">
-			
-			</div>
+			<section className="image-wrapper">
+				<div className="image-container">
+					<img src=" { image_src_here } " />
+				</div>
+				<div className="details-container">
+					<CommentsHeader />
+					<Comments />
+				</div>
+			</section>
 		)
 	}
 })
 
 export default DetailView
+
+
+
