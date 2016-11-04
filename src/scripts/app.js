@@ -28,6 +28,7 @@ const app = function() {
 			console.log('handeling listView')
 		},
 		handlDetail: function(){
+			//this is how we grab the id from the hash
 			var individualModel = new IndividualModel({
 				id: imageId
 			})
