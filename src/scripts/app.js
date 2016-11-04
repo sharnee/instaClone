@@ -48,7 +48,7 @@ const app = function() {
 			promise.then(
 				function(){
 					// console.log(individualModel)
-					ReactDOM.render(<DetailView collection={individualModel} />, document.querySelector('.body-wrapper'))
+					ReactDOM.render(<DetailView model={individualModel} />, document.querySelector('.body-wrapper'))
 				})
 			// console.log('handeling detail')
 		},

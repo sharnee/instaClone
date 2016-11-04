@@ -4,7 +4,7 @@ var Footer = React.createClass({
 	render: function() {
 		return (
 			<footer>
-				<p>Made by Team InstaClone @ The Iron Yard</p>
+				<p>Made by Team InstaClone &#x40; The Iron Yard</p>
 			</footer>
 		)
 	}
