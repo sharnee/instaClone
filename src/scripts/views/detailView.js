@@ -21,7 +21,7 @@ var Image = React.createClass({
 		return (
 			<section className="image-wrapper">
 				<div className="image-container">
-					<img src=" { image_src_here } " />
+					<img src=" { this.props.get(imageURL) } " />
 				</div>
 				<div className="details-container">
 					<CommentsHeader />
@@ -33,6 +33,3 @@ var Image = React.createClass({
 })
 
 export default DetailView
-
-
-
