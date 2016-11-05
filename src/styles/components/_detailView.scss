@@ -1,0 +1,12 @@
+.image-wrapper {
+	max-width: 960px;
+	margin: 0 auto;	
+	// @include inlineBlockContain;
+	display: flex;
+}
+.image-container {
+	flex: 1;
+}
+.details-container {
+	width: 250px;
+}
