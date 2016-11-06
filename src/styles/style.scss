@@ -7,14 +7,16 @@
 @import "variables/_typography.scss";
 
 // BASE
-@import "base/_reset";
-@import "base/_block_level";
-@import "base/_typography";
+@import "base/_reset.scss";
+@import "base/_block_level.scss";
+@import "base/_typography.scss";
 
 // COMPONENTS
 @import "components/_footer.scss";
-@import "components/_detailView";
+@import "components/_comments.scss";
+@import "components/_commentsSubmit.scss";
+@import "components/_detailView.scss";
 @import "components/_header.scss";
-@import "components/_gridView";
-@import "components/_listView";
+@import "components/_gridView.scss";
+@import "components/_listView.scss";
 @import "components/_search.scss";

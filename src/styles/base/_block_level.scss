@@ -7,3 +7,40 @@
 	clear: both;
 	visibility:hidden;
 }
+
+body {
+	background-color: $light-grey;
+}
+
+.body-container {
+	height: 100vh;
+	display:flex;
+	flex-direction: column;
+}
+
+input, textarea, select {
+	font-family: $body;
+	font-weight: 300;
+	font-size: 1rem;
+	&:focus {
+		
+		outline: none;
+	}
+
+}
+input[type="text"], textarea {
+	padding: 0.5rem 0.75rem;
+	border: 1px solid $borders ;
+}
+input[type="submit"] {
+	padding: 0.5rem 1rem;
+	border-radius: 3px;
+	border: 0;
+	color: white;
+	font-family: $body;
+	background-color: $dark-blue;
+	cursor: pointer;
+	&:hover {
+		background-color: lighten($dark-blue, 10);
+	}
+}
