@@ -4,15 +4,16 @@ import Footer from './footer'
 // import Likes from './likes'
 import CommentsHeader from './commentsHeader'
 import Comments from './comments'
+import Image from './image'
 
 var DetailView = React.createClass({
 	render: function() {
 		
 		return (
-			<div className="body-container">
+			<div className="detail-body-container">
 				<Header />
 				<div className="flex-wrapper">
-					<Image model={this.props.model} />
+					<ImagePost model={this.props.model} />
 				</div>
 				<Footer />
 			</div>
@@ -20,14 +21,13 @@ var DetailView = React.createClass({
 	}
 })
 
-var Image = React.createClass({
+var ImagePost = React.createClass({
 	render: function() {
-		console.log(this.props.model)
 		var detailData = this.props.model
 		return (			
 			<section className="image-wrapper">
 				<div className="image-container">
-					<img src={ detailData.get('imageURL') } />
+					<Image model={this.props.model} />
 				</div>
 				<div className="details-container">
 					<CommentsHeader model={this.props.model} />
@@ -39,8 +39,3 @@ var Image = React.createClass({
 })
 
 export default DetailView
-
-
-// 
-// <CommentsHeader />
-// 					<Comments />	

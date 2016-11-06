@@ -13,9 +13,15 @@ body {
 }
 
 .body-container {
+
+}
+.detail-body-container {
 	height: 100vh;
-	display:flex;
+	display: flex;
 	flex-direction: column;
+}
+input.search {
+	display: none;
 }
 
 input, textarea, select {
