@@ -3,10 +3,11 @@ import React from 'react'
 var Header = React.createClass({
 	render: function() {
 		return (
-			<header>
-				
-				<a href="#home"><h1>InstaClone</h1></a>
-				<input type="text" />
+			<header className="header">
+				<div className="header-wrapper">
+					<a href="#home"><h1>InstaClone</h1></a>
+					<input type="text" className="search" />
+				</div>
 			</header>
 		)
 	}
