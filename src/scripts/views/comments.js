@@ -1,18 +1,23 @@
 import React from 'react'
+import CommentSubmit from './commentSubmit'
 
 var Comments = React.createClass({
 	_listComments: function(commentsArray) {
-		var commentStr = ''
+		var commentArr = []
 		for ( var i = 0; i < commentsArray.length; i++) {
-			commentStr += '<li><strong>' + commentsArray[i].byUser + '</strong> ' + commentsArray[i].message + '</li>'
+			commentArr.push( <li><strong> {commentsArray[i].byUser} </strong> {commentsArray[i].message} </li> )
 		}
-		return (<ul> {commentStr} </ul>)
+		return commentArr
+		
 	},
 	render: function() {
 		var detailData = this.props.model
 		return (
 			<section className="comments">
-				{this._listComments(detailData.get('comments'))}
+				<ul>
+					{this._listComments(detailData.get('comments'))}
+				</ul>
+				{/* <CommentSubmit /> */}
 			</section>
 
 		)

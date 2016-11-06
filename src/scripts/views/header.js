@@ -5,7 +5,7 @@ var Header = React.createClass({
 		return (
 			<header>
 				
-				<h1>InstaClone&trade;</h1>
+				<h1>InstaClone</h1>
 				<input type="text" />
 			</header>
 		)

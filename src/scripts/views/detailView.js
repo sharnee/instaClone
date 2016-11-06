@@ -11,7 +11,9 @@ var DetailView = React.createClass({
 		return (
 			<div className="body-container">
 				<Header />
-				<Image model={this.props.model} />
+				<div className="flex-wrapper">
+					<Image model={this.props.model} />
+				</div>
 				<Footer />
 			</div>
 		)
