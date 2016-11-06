@@ -4,11 +4,11 @@ var CommentSubmit = React.createClass({
 	render: function() {
 		return (
 
-			<form className="comment-submit">
+			<form className="create-comment">
 				<input type="hidden" name="gramID" defaultValue="gramID" />
 				<input type="text" name="userName" maxlength="40" placeholder="Username" />
 				<textarea type="text" name="message" rows="3" maxlength="140" placeholder="Your message" />
-				<input type="submit" value="submit" />
+				<button type="submit" value="submit" class="submit-comment">Submit</button>
 			</form>
 
 		)

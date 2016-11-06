@@ -3,19 +3,14 @@ import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import Header from './views/header'
 import DetailView from './views/detailView.js'
+import ListView from './views/listView.js'
 
 const app = function() {
 //MODEL
-	var PictureCollection = Backbone.Collection.extend({
+	var ImageCollection = Backbone.Collection.extend({
 		url: 'https://instaclone-example.now.sh/api/gram',
-		// _key: 'some key',
-		// temp parse function if needed. I don't think we will need this but it's here if we do. 
-		parse: function(rawResponse){
-	 			var parsedResponse = rawResponse.results
-	 			return parsedResponse
-	 		}
 		})
-	var IndividualModel = Backbone.Model.extend ({
+	var ImageModel = Backbone.Model.extend ({
 		urlRoot: 'https://instaclone-example.now.sh/api/gram/'	
 	})
 
@@ -25,30 +20,29 @@ const app = function() {
 //CONTROLLER
 	var Controller = Backbone.Router.extend({
 		routes:{
-			'listView': 'handleListView',
+			'home': 'handleListView',
 			'detail/:imageId': 'handlDetail',
 			'search/:searchTerm': 'handleSearch',
 			'*default': 'handleDefault'
 		},
 		handleListView: function(){
 			// console.log('handeling listView')
-			var PictureCollection = new PictureCollection()
-			var promise = PictureCollection.fetch()
+			var imageCollection = new ImageCollection()
+			var promise = imageCollection.fetch()
 			promise.then(
 				function(){
-					ReactDOM.render(<ListView collection={pictureModel} />, document.querySelector('.body-wrapper'))
+					ReactDOM.render(<ListView collection={imageCollection} />, document.querySelector('.body-wrapper'))
 				})
 		},
 		handlDetail: function(imageId){
 			//this is how we grab the id from the hash
-			var individualModel = new IndividualModel({
+			var imageModel = new ImageModel({
 				id: imageId
 			})
-			var promise = individualModel.fetch()
+			var promise = imageModel.fetch()
 			promise.then(
 				function(){
-					// console.log(individualModel)
-					ReactDOM.render(<DetailView model={individualModel} />, document.querySelector('.body-wrapper'))
+					ReactDOM.render(<DetailView model={imageModel} />, document.querySelector('.body-wrapper'))
 				})
 			// console.log('handeling detail')
 		},
@@ -61,7 +55,7 @@ const app = function() {
 			})
 			promise.then(
 				function(){
-					ReactDOM.render(<ListView collection={individualModel} />, document.querySelector('.body-wrapper'))
+					ReactDOM.render(<ListView collection={imageCollection} />, document.querySelector('.body-wrapper'))
 				})
 		},
 		handleDefault: function(){

@@ -5,7 +5,7 @@ var Header = React.createClass({
 		return (
 			<header>
 				
-				<h1>InstaClone</h1>
+				<a href="#home"><h1>InstaClone</h1></a>
 				<input type="text" />
 			</header>
 		)
