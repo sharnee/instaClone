@@ -1,0 +1,27 @@
+.list-body-container {
+	&.gallery {
+		.image-list .image-details, .image-list .comments {
+			display:none;
+		}
+		.image-container {
+			margin: 1%;
+			border: 1px solid $borders;
+		}
+		.image-list {
+			max-width: 1280px;
+			margin: 0 auto;
+			@media #{$normal} {
+				padding: 3rem 0;
+				& > div {
+					@include inlineBlockContain;
+				}
+				.image-container {
+					width: (94%/3);
+					img {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

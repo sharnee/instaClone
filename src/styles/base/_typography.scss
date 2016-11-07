@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,700|Dancing+Script');
+
+body {
+	font-family: $body;
+	font-weight: 300;
+	font-size: 14px;
+	color: black;
+}
+
+h1 {
+	font-family: $head;
+	font-weight: normal;
+}
+a, a:link, a:hover, a:visited {
+	text-decoration: none;
+	color: black;
+}

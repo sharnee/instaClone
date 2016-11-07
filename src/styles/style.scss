@@ -1,10 +1,23 @@
-* {
-	font-family: Helvetica, Arial, sans-serif;
-	box-sizing: border-box;
-}
 
-h1 {
-	font-size: 300px;
-	text-align: center;
-	color: fuchsia;
-}
+// ABSTRACTIONS
+@import "abstractions/_layout.scss";
+
+// VARIABLES
+@import "variables/_colors.scss";
+@import "variables/_queries.scss";
+@import "variables/_typography.scss";
+
+// BASE
+@import "base/_reset.scss";
+@import "base/_block_level.scss";
+@import "base/_typography.scss";
+
+// COMPONENTS
+@import "components/_footer.scss";
+@import "components/_comments.scss";
+@import "components/_commentsSubmit.scss";
+@import "components/_detailView.scss";
+@import "components/_header.scss";
+@import "components/_gridView.scss";
+@import "components/_listView.scss";
+@import "components/_search.scss";
